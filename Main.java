@@ -9,28 +9,30 @@ public class Main {
         System.out.println("Please, choose one of the shape form: Circle, Square, Rectangle, Triangle, Quad");
         String nameInput = scanner.nextLine();
 
-        if (nameInput.equalsIgnoreCase("Circle")) {
-            Shape shape = new Circle();
-            shape.shape();
-        } else
-        if (nameInput.equalsIgnoreCase("Rectangle")) {
-            Shape shape = new Rectangle();
-            shape.shape();
-        } else
-        if (nameInput.equalsIgnoreCase("Triangle")) {
-            Shape shape = new Triangle();
-            shape.shape();
-        } else
-        if (nameInput.equalsIgnoreCase("Quad")) {
-            Shape shape = new Quad();
-            shape.shape();
-        } else
-        if (nameInput.equalsIgnoreCase("Square")) {
-            Shape shape = new Square();
-            shape.shape();
+        switch (nameInput.toLowerCase()) {
+            case "circle":
+                Circle circle = new Circle();
+                circle.shape();
+                break;
+            case "square":
+                    Square square = new Square();
+                    square.shape();
+                break;
+            case "rectangle":
+                Rectangle rectangle = new Rectangle();
+                rectangle.shape();
+                break;
+            case "triangle":
+                Triangle triangle = new Triangle();
+                triangle.shape();
+                break;
+            case "quad":
+                Quad quad = new Quad();
+                quad.shape();
+                break;
 
-        } else
-        throw new RuntimeException("Please, try again and chose from the list!");
+            default: throw new RuntimeException("Doesn't exist! Please, return and make right chose!");
+        }
 
     }
 }
