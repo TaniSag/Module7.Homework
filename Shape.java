@@ -1,5 +1,7 @@
 package Module7.Homework;
 
-public interface Shape {
-    void shape();
+public abstract class Shape {
+
+   public abstract void shape();
+
 }
